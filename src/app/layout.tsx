@@ -6,6 +6,7 @@ import localFont from "next/font/local";
 
 import { getURL } from "@/utils/helpers";
 import { cn } from "@/lib/utils";
+import { ModeProvider } from "@/providers/ModeProvider";
 
 const title = "Leton Finance Dashboard";
 const description =
@@ -71,7 +72,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           fontSans.variable
         )}
       >
-        {children}
+        <ModeProvider>{children}</ModeProvider>
       </body>
     </html>
   );
